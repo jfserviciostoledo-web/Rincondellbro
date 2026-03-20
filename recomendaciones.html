@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones | Librería El Rincón del Libro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="contenedor header-flex">
+            <a href="index.html" class="logo">El Rincón del Libro</a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="recomendaciones.html">Recomendaciones</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre la librería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h2>Nuestras Recomendaciones</h2>
+        <p>Descubre nuestra selección cuidada de lecturas para todas las edades. Desde las últimas novedades en narrativa hasta los clásicos que nunca fallan y la mejor literatura infantil.</p>
+        
+        <div class="grid-libros">
+            
+            <article class="tarjeta tarjeta-libro">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="Libro de narrativa contemporánea abierto">
+                <span class="etiqueta-categoria">Narrativa Contemporánea</span>
+                <h3>El eco de las palabras</h3>
+                <p>Una novela cautivadora que explora los lazos familiares y los secretos ocultos a través de generaciones. Perfecta para quienes buscan historias profundas.</p>
+            </article>
+
+            <article class="tarjeta tarjeta-libro">
+                <img src="https://images.unsplash.com/photo-1474932430478-367dbb6832c1?auto=format&fit=crop&w=600&q=80" alt="Libros clásicos con encuadernación antigua">
+                <span class="etiqueta-categoria">Clásicos</span>
+                <h3>Ediciones de Colección</h3>
+                <p>Redescubre las obras maestras de la literatura universal en ediciones cuidadas y traducciones revisadas. Un imprescindible en tu biblioteca.</p>
+            </article>
+
+            <article class="tarjeta tarjeta-libro">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Libro de cuentos abierto con luz cálida">
+                <span class="etiqueta-categoria">Literatura Infantil</span>
+                <h3>Aventuras en el bosque</h3>
+                <p>Un álbum ilustrado mágico para los más pequeños. Fomenta la imaginación y el amor por la lectura desde los primeros años.</p>
+            </article>
+
+            <article class="tarjeta tarjeta-libro">
+                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80" alt="Libro de ensayo sobre una mesa">
+                <span class="etiqueta-categoria">Ensayo</span>
+                <h3>Pensar el presente</h3>
+                <p>Una selección de ensayos breves para reflexionar sobre la sociedad actual, el arte y la cultura. Para mentes inquietas.</p>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p class="copyright">&copy; 2024 Librería El Rincón del Libro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('hamburger');
+        const menu = document.getElementById('nav-menu');
+        const links = document.querySelectorAll('.nav-menu a');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
