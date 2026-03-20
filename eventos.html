@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Culturales | El Rincón del Libro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <header>
+        <div class="contenedor header-flex">
+            <a href="index.html" class="logo">El Rincón del Libro</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="recomendaciones.html">Recomendaciones</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre la librería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h2>Eventos y Actividades Culturales</h2>
+        <p>En El Rincón del Libro creemos que una librería es más que un comercio; es un punto de encuentro para compartir nuestra pasión por la literatura[cite: 11, 19]. Consulta nuestra agenda:</p>
+        
+        <div class="grid-eventos">
+            <article class="tarjeta tarjeta-libro">
+                <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=600&q=80" alt="Grupo de personas compartiendo lecturas">
+                <span class="etiqueta-categoria">Club de Lectura</span>
+                <h3>Encuentros Mensuales</h3>
+                <p>Compartimos impresiones sobre una obra seleccionada en un ambiente distendido y amable[cite: 30, 59].</p>
+            </article>
+
+            <article class="tarjeta tarjeta-libro">
+                <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=600&q=80" alt="Autor firmando libros en una mesa">
+                <span class="etiqueta-categoria">Presentaciones</span>
+                <h3>Nuevas Voces</h3>
+                <p>Organizamos presentaciones de libros y encuentros donde podrás conocer de cerca a tus autores favoritos[cite: 13, 31, 32].</p>
+            </article>
+
+            <article class="tarjeta tarjeta-libro">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Niños escuchando un cuentacuentos">
+                <span class="etiqueta-categoria">Infantil</span>
+                <h3>Cuentacuentos</h3>
+                <p>Actividades pensadas para fomentar la lectura entre los más pequeños de la casa y familias del barrio[cite: 17, 25, 37].</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p class="copyright">&copy; 2024 Librería El Rincón del Libro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('hamburger');
+        const menu = document.getElementById('nav-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('show'); });
+    </script>
+</body>
+</html>
