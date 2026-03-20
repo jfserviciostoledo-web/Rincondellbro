@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería El Rincón del Libro | Inicio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <header>
+        <div class="contenedor header-flex">
+            <a href="index.html" class="logo">El Rincón del Libro</a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="recomendaciones.html">Recomendaciones</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre la librería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Descubre tu próxima gran lectura</h2>
+            <p>Un espacio cercano donde la literatura cobra vida y los lectores se encuentran.</p>
+        </section>
+
+        <section class="contenedor">
+            <h2>Bienvenidos a nuestro rincón</h2>
+            <p>La Librería El Rincón del Libro es una librería independiente dedicada a la venta y difusión de literatura para todas las edades.</p>
+            <br>
+            <p>Desde su apertura en 2014, el establecimiento se ha convertido en un pequeño punto de encuentro cultural para los amantes de la lectura en el barrio.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p class="copyright">&copy; 2024 Librería El Rincón del Libro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('hamburger');
+        const menu = document.getElementById('nav-menu');
+        const links = document.querySelectorAll('.nav-menu a');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
