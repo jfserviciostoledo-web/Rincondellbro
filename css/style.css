@@ -42,7 +42,7 @@ header {
     background-color: var(--color-fondo);
     padding: 20px 0;
     border-bottom: 1px solid var(--color-secundario);
-    position: relative; /* Clave para el menú móvil */
+    position: relative; 
     z-index: 10000;
 }
 
@@ -113,7 +113,7 @@ header {
     margin-bottom: 15px;
 }
 
-/* --- 6. GRIDS GENÉRICOS (Preparados para no repetir código) --- */
+/* --- 6. GRIDS GENÉRICOS  --- */
 .grid-servicios, .grid-libros, .grid-eventos {
     display: grid;
     grid-template-columns: 1fr;
@@ -138,19 +138,19 @@ footer {
 }
 /* --- ESTILOS ESPECÍFICOS PARA TARJETAS DE LIBROS --- */
 .tarjeta-libro {
-    padding: 0; /* Quitamos el padding para que la imagen llegue al borde */
-    overflow: hidden; /* Para que las esquinas de la imagen se redondeen con la tarjeta */
+    padding: 0; 
+    overflow: hidden; 
     transition: transform 0.3s ease;
 }
 
 .tarjeta-libro:hover {
-    transform: translateY(-5px); /* Pequeño efecto de elevación al pasar el ratón */
+    transform: translateY(-5px); 
 }
 
 .tarjeta-libro img {
     width: 100%;
     height: 250px;
-    object-fit: cover; /* Clave: recorta la imagen sin deformarla */
+    object-fit: cover; 
     border-bottom: 3px solid var(--color-primario);
 }
 
@@ -172,7 +172,7 @@ footer {
 
 .etiqueta-categoria {
     display: inline-block;
-    background-color: var(--color-acento); /* Nuestro tono dorado/madera */
+    background-color: var(--color-acento);
     color: #fff;
     font-size: 0.8rem;
     font-weight: bold;
