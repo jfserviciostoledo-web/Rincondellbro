@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre la Librería | El Rincón del Libro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <header>
+        <div class="contenedor header-flex">
+            <a href="index.html" class="logo">El Rincón del Libro</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="recomendaciones.html">Recomendaciones</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="sobre_nosotros.html">Sobre la librería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section>
+            <h2>Nuestra Historia</h2>
+            <p>La Librería El Rincón del Libro nació en <strong>2014</strong> con un propósito claro: ser mucho más que un local de venta de libros. Queríamos crear un refugio para la cultura en el corazón de nuestro barrio, un lugar donde el tiempo se detiene entre estanterías de madera y olor a papel nuevo.</p>
+            <br>
+            <p>A lo largo de estos años, nos hemos especializado en ofrecer una cuidada selección de <strong>narrativa contemporánea, clásicos imprescindibles y literatura infantil</strong>. Pero si algo nos define, es nuestro compromiso con las <strong>editoriales independientes</strong>, aquellas que apuestan por voces nuevas y ediciones cuidadas que son verdaderas joyas.</p>
+        </section>
+
+        <section style="margin: 40px 0;">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80" alt="Interior acogedor de una librería con estanterías de madera" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        </section>
+
+        <section>
+            <h3>Un espacio para compartir</h3>
+            <p>Creemos firmemente en el papel de la librería como motor cultural local. Por eso, nuestro espacio está siempre abierto a presentaciones, charlas y clubes de lectura. Para nosotros, cada lector que cruza nuestra puerta es un vecino y un amigo con quien compartir nuestra pasión por las historias bien contadas.</p>
+            <br>
+            <p>Te invitamos a visitarnos, dejarte aconsejar por nuestro equipo y descubrir ese libro que te está esperando en alguna de nuestras estanterías.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p class="copyright">&copy; 2024 Librería El Rincón del Libro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('hamburger');
+        const menu = document.getElementById('nav-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('show'); });
+    </script>
+</body>
+</html>
