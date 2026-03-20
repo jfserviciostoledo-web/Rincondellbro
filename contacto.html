@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | El Rincón del Libro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <header>
+        <div class="contenedor header-flex">
+            <a href="index.html" class="logo">El Rincón del Libro</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="recomendaciones.html">Recomendaciones</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="sobre_nosotros.html">Sobre la librería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h2>Contacta con nosotros</h2>
+        <p>¿Buscas una recomendación, quieres consultar nuestro catálogo o unirte a un club de lectura? Estamos aquí para escucharte con la cercanía de siempre.</p>
+
+        <div class="grid-servicios" style="margin-top: 40px;">
+            
+            <article class="tarjeta">
+                <h3>Datos de Contacto</h3>
+                <p><strong>Ubicación:</strong> Calle de los Libros, 12, 28001 (En el corazón del barrio)</p>
+                <br>
+                <p><strong>Email:</strong> info@elrincondellibro.es</p>
+                <br>
+                <p><strong>Horario:</strong> <br>
+                Lunes a Viernes: 10:00 - 14:00 | 17:00 - 20:30 <br>
+                Sábados: 10:30 - 14:30</p>
+            </article>
+
+            <section class="tarjeta">
+                <h3>Envíanos un mensaje</h3>
+                <form action="#" style="margin-top: 15px;">
+                    <div style="margin-bottom: 15px;">
+                        <label for="nombre" style="display: block; margin-bottom: 5px; font-weight: bold;">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" style="width: 100%; padding: 12px; border: 1px solid var(--color-secundario); border-radius: 4px; font-family: var(--fuente-texto);" required>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" style="width: 100%; padding: 12px; border: 1px solid var(--color-secundario); border-radius: 4px; font-family: var(--fuente-texto);" required>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label for="mensaje" style="display: block; margin-bottom: 5px; font-weight: bold;">¿En qué podemos ayudarte?</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu consulta sobre libros, eventos o reservas..." style="width: 100%; padding: 12px; border: 1px solid var(--color-secundario); border-radius: 4px; font-family: var(--fuente-texto); height: 120px; resize: vertical;" required></textarea>
+                    </div>
+
+                    <button type="submit" style="background-color: var(--color-primario); color: white; padding: 12px 25px; border: none; border-radius: 4px; cursor: pointer; font-size: 1.1rem; font-weight: bold; width: 100%; transition: opacity 0.3s;">Enviar mensaje</button>
+                </form>
+            </section>
+
+        </div>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1200&q=80" alt="Libros abiertos y café" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; opacity: 0.8;">
+        </div>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p class="copyright">&copy; 2024 Librería El Rincón del Libro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('hamburger');
+        const menu = document.getElementById('nav-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('show'); });
+    </script>
+</body>
+</html>
