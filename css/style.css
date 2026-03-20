@@ -1,1 +1,169 @@
+/* --- 1. VARIABLES DE DISEÑO --- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
+:root {
+    --color-fondo: #FDFBF7; 
+    --color-texto: #2C2C2C; 
+    --color-primario: #8B3A3A; 
+    --color-secundario: #E8E1D5; 
+    --margen-pantalla: 20px;
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-texto: 'Lora', serif;
+}
+
+/* --- 2. ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    line-height: 1.7;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px var(--margen-pantalla);
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+/* --- 3. CABECERA Y MENÚ --- */
+header {
+    background-color: var(--color-fondo);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-secundario);
+    position: relative; /* Clave para el menú móvil */
+    z-index: 10000;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--margen-pantalla);
+}
+
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li a {
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.nav-menu li a:hover {
+    color: var(--color-primario);
+}
+
+/* --- 4. BOTÓN HAMBURGUESA --- */
+.hamburger {
+    display: none; 
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-primario);
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+/* --- 5. SECCIÓN HERO --- */
+.hero {
+    position: relative;
+    background-image: linear-gradient(rgba(44, 44, 44, 0.7), rgba(44, 44, 44, 0.7)), url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+    color: #FDFBF7;
+    text-align: center;
+    padding: 120px var(--margen-pantalla);
+}
+
+.hero h2 {
+    color: #FDFBF7;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* --- 6. GRIDS GENÉRICOS (Preparados para no repetir código) --- */
+.grid-servicios, .grid-libros, .grid-eventos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tarjeta {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid var(--color-secundario);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* --- 7. FOOTER --- */
+footer {
+    background-color: var(--color-secundario);
+    text-align: center;
+    padding: 20px var(--margen-pantalla);
+    margin-top: 40px;
+}
+
+/* --- 8. MEDIA QUERIES --- */
+@media (max-width: 767px) {
+    .hamburger { display: block; }
+    
+    .nav-menu {
+        position: absolute; 
+        top: 100%; left: 0; width: 100%;
+        background: #fff; display: none; 
+        flex-direction: column;
+        z-index: 9999;
+        border-bottom: 3px solid var(--color-primario);
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-menu.show { display: flex; }
+    .nav-menu ul { flex-direction: column; }
+    .nav-menu li { text-align: center; border-top: 1px solid var(--color-secundario); padding: 10px 0;}
+}
+
+@media (min-width: 768px) {
+    .grid-servicios, .grid-libros, .grid-eventos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-servicios, .grid-libros, .grid-eventos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
